@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionario</title>
+</head>
+<body>
+    <a href="./cadastro-produtos.html">Cadastro de produtos</a>
+    <a href="./funcionarios.html">Funcionarios</a>
+    <a href="./pagina-inicial.html">Pagina Inicial</a>
+    <hr>
+    <h1>Cadastro de Funcionarios:</h1>
+
+    <div>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome">
+    </div>
+    <br>
+
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email">
+    </div>
+    <br>
+
+    <div>
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade">
+    </div>
+    <br>
+
+    <div>
+        <h2>Sexo</h2>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="Sexo" value="masculino">
+        <label for="masculino">Feminino</label>
+        <input type="radio" name="Sexo" value="feminino">
+    </div>
+    <br>
+
+    <div>
+        <h2>Estado Civil</h2>
+        <label for="estado-civil">Estado civil</label>
+        <select name="estado-civil">
+            <option value="solteiro">Solteiro</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="outro">Outro</option>
+        </select>
+    </div>
+    <br>
+    
+    <div>
+        <h2>Profissão</h2>
+        <select>
+            <label for="profissao">Profissao</label>
+            <option value="programador">Programador</option>
+            <option value="analista">Analista</option>
+            <option value="Designer">Designer</option>
+        </select>
+    </div>
+    <br>
+
+    <div>
+        <h2>Termos de privacidade</h2>
+        <label for="termos">Aceite de politicas de privacidade</label>
+        <input type="checkbox" name="termos">
+    </div>
+    
+    <div>
+        <h2>Observacao</h2>
+        <label for="observacao">Observacao</label>
+        <textarea rows="4" cols="40">obs:</textarea>
+    </div>
+    
+
+    
+
+    <div>
+        <button type="submit">Enviar</button>
+        
+    </div>
+
+    <a href="./funcionarios.html">Voltar</a>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+.container-pagina{
+    border: 3px solid;
+    background-color: white;
+    transition: 1s;
+}
+
+:hover .container-pagina{
+    background-color: darkgrey;
+    transition: 1s;
+}
+
+.titulo-pagina{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px;
+    color: black;
+}
+
+.container-titulo{
+    background-color: rgb(212, 212, 212);
+    margin: 20px;
+}
+
+:hover .container-titulo{
+    background-color: white;
+    margin: 50px;
+    transform: scale(0.8);
+    transition: 1s;
+}
+
+.paragrafo-pagina{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+
+.link-trier{
+    margin: 20px;
+    text-decoration: none;
+}

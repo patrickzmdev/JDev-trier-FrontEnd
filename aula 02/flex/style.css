@@ -1,0 +1,50 @@
+.flex-container{
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div{
+    height: 50px;
+    width: 50px;
+}
+
+
+.div-1{
+    grid-area: div1;
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.div-2{
+    grid-area: div2;
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+
+.div-3{
+    grid-area: div3;
+    background-color: yellow;
+    border-radius: 5px
+}
+
+.div-4{
+    grid-area: div4;
+    background-color: brown;
+    border-radius: 5px;
+}
+
+.div-5{
+    grid-area: div5;
+    background-color:blueviolet;
+    border-radius: 5px;
+}
+
+.div-6{
+    grid-area: div6;
+    background-color: blue;
+    border-radius: 5px;
+}

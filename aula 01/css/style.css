@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: blue;
+}
+
+.fundo-roxo{
+    background-color: blueviolet;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    padding: 20px;
+}
+
+.h2-margin{
+    margin: 100px;
+}
+
+.container{
+    border: 1px solid;
+    margin-top: 20px;
+}

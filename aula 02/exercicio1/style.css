@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.grid-container{
+
+    display: grid;
+    grid-template-columns: 10% 90%; /*auto-fill: cria uma espacamento dinamico*/
+    grid-template-rows: 10% 10%;
+    grid-template-areas: 
+    'div1 div1 '
+    'div2 div3 '
+    'div2 div3 '
+    'div2 div3 '
+    'div2 div3 '
+    'div2 div3 '
+    ;
+}
+
+.div-1{
+    grid-area: div1;
+    background-color: rgb(136, 136, 245);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 70%;
+    padding: 0.5rem;
+}
+
+.div-2{
+    grid-area: div2;
+    background-color: rgb(222, 222, 255);
+}
+
+.div-3{
+    grid-area: div3;
+    background-color: white;
+}
+
+.container-texto{
+    padding: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-lateral{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: black;
+    padding: 0.5rem;
+}
+
+.botao-menu{
+    background-color: rgb(136, 136, 245);
+    width: 7rem;
+    height: 4rem;
+    border-bottom: 5px;
+    border-radius: 10%;
+    color: black;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+}
+
+:hover.botao-menu{
+    background-color: rgb(115, 115, 185); 
+}
+
+h3{
+    height: fit-content;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 30px 1fr 1fr;
+        grid-template-areas:
+        'div1'
+        'div2'
+        'div3'
+        ;
+    }
+}
