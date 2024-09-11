@@ -33,22 +33,25 @@
         <h1>Cadastro de Funcionários</h1>
 
         <form>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
-            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite o email" required>
-            </div>
+                <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite o email" required>
+                </div>
+            </div>    
 
-            <div class="mb-3">
+            <div class="row">
+            <div class="col-md-6 mb-3">
                 <label for="idade" class="form-label">Idade</label>
                 <input type="number" class="form-control" id="idade" placeholder="Digite a idade" required>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6 mb-3">
                 <h2>Sexo</h2>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino" required>
@@ -59,8 +62,10 @@
                     <label class="form-check-label" for="feminino">Feminino</label>
                 </div>
             </div>
+            </div>
 
-            <div class="mb-3">
+            <div class="row">
+            <div class="col-md-6 mb-3">
                 <label for="estadoCivil" class="form-label">Estado Civil</label>
                 <select class="form-select" id="estadoCivil" required>
                     <option selected disabled>Escolha uma opção</option>
@@ -70,7 +75,7 @@
                 </select>
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="profissao" class="form-label">Profissão</label>
                 <select class="form-select" id="profissao" required>
                     <option selected disabled>Escolha uma profissão</option>
@@ -78,6 +83,7 @@
                     <option value="2">Analista</option>
                     <option value="3">Designer</option>
                 </select>
+            </div>
             </div>
 
             <div class="mb-3 form-check">
@@ -92,10 +98,6 @@
 
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
-            </div>
-
-            <div>
-                <a href="./funcionarios.html" class="btn btn-secondary">Voltar</a>
             </div>
         </form>
     </div>

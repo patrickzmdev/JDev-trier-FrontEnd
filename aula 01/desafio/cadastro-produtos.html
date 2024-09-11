@@ -33,33 +33,36 @@
         <h1>Cadastro de Produtos</h1>
 
         <form>
-            <div class="mb-3">
+            <div class="row">
+            <div class="col-md-6 mb-3">
                 <label for="productName" class="form-label">Nome do Produto</label>
                 <input type="text" class="form-control" id="productName" placeholder="Nome do produto" required>
             </div>
 
             
-            <div class="row">
-                <div class="mb-3">
+            
+                <div class="col-md-6 mb-3">
                     <label for="productQuantity" class="form-label">Quantidade em Estoque</label>
                     <input type="number" class="form-control" id="productQuantity" placeholder="Quantidade em estoque" required>
                 </div>
+            </div>    
            
-
-            <div class="mb-3">
-                <label for="manufactureDate" class="form-label">Data de Fabricação</label>
-                <input type="date" class="form-control" id="manufactureDate" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Estado do Produto</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="productState" id="newProduct" value="new" required>
-                    <label class="form-check-label" for="newProduct">Novo</label>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="manufactureDate" class="form-label">Data de Fabricação</label>
+                    <input type="date" class="form-control" id="manufactureDate" required>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="productState" id="usedProduct" value="used" required>
-                    <label class="form-check-label" for="usedProduct">Usado</label>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Estado do Produto</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="productState" id="newProduct" value="new" required>
+                        <label class="form-check-label" for="newProduct">Novo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="productState" id="usedProduct" value="used" required>
+                        <label class="form-check-label" for="usedProduct">Usado</label>
+                    </div>
                 </div>
             </div>
 

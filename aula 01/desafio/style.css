@@ -1,13 +1,13 @@
 body {
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: #17a2b8 ;
 }
 
 .navbar-brand, .nav-link {
-  color: #ffffff !important;
+  color: black;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h1 {
 .tabela{
   border: 3px solid;
   background-color: white;
-  margin: 4rem;
+  margin: 6rem;
 }
 
 .tabela2{
@@ -53,3 +53,12 @@ h1 {
 .col{
   border: 1px solid;
 }
+
+.imagem-fundo{
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+
