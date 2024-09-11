@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+ul, a, h3 {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(60, 60, 173);
+    height: 80px; 
+}
+
+.logo{
+    height: 30px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a:hover {
+   color: darkgrey;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 15rem;
+    height: 2.5rem; 
+    border-radius: 2px;
+    color: black;
+    padding: 0 10px;
+}
+
+.search-button{
+    width: 5rem;
+    height: 2rem;
+    background-color: gray;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 80px); 
+    width: 100%;
+}
+
+.container-colunas {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    background-color: rgb(47, 47, 134);
+}
+
+.menu-lateral {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.menu-lateral li{
+    margin-top: 1rem;
+}
+
+.menu-lateral button{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 5px;
+}
+
+.center-pagina {
+    width: calc(100% - 10rem); 
+    height: 100%;
+}
+
+.center-pagina p{
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu-lateral button:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 800px) {
+    .search {
+        display: none;
+    }
+}
