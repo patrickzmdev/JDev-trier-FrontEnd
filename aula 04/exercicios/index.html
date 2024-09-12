@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container-principal">
+        <div class="container mt-5 text-center border-solid">
+            <h2 class="mb-4">Todo List</h2>
+            <table class="table table-body table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id tarefa</th>
+                        <th>Descricao</th>
+                        <th>Status</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+        
+                </tbody>
+                
+            </table>
+            <div class="container-add-tarefa">
+                <input type="text" id="tarefa" placeholder="tarefa...">
+                <button type="submit" id="addTarefa" onclick="adicionarTarefa()">Adicionar Tarefa</button>     
+                <button type="submit" id="addTarefa" onclick="removerTarefasConcluidas()">Limpar Tarefas Concluidas</button>
+            </div>
+            <div class="container-mostrar-tarefas">
+                <h3>Tarefas Concluídas: <span id="tarefas-concluidas-count">0</span></h3>
+                <h3>Tarefas Pendentes: <span id="tarefas-pendentes-count">0</span></h3>
+            </div>
+        </div>
+    </div>       
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+o usuário deve ser capaz de adicionar novos itens a lista de tarefas
+cada item adicionado deve ter um botão de remover e um botão
+ao clicar em marcar como concluído o item deve mudar de cor e ser tachado, indicando que foi concluído
+o botão remover deve remover o item da lista
+adicione validação para impedir que o usuário adicione tarefas vazias
+Adicione um botão limpar tarefas concluídas, que remove todos os itens que foram marcados como concluídos
+crie uma contagem dinâmica de quantas tarefas ainda estão pendentes e quantas já foram concluidas 
