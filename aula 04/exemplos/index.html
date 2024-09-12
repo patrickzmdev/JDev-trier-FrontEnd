@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="home">
+        <header class="header">
+            <div class="contador">
+                <h4>Pendentes:</h4>
+                <h4 id="pendentes"></h4>
+            </div>
+            <h1>Todo List</h1>
+            <div class="contador">
+                <h4>Concluidas:</h4>
+                <h4 id="concluidas"></h4>
+            </div>
+        </header>
+        <nav class="navegacao">
+            <form class="formulario" onsubmit="adicionarTarefa(event)">
+                <input type="text" class="input-text" name="tarefa" placeholder="Insira uma nova tarefa..">
+            </form>
+        </nav>
+        <section class="principal">
+            <table class="tabela" id="tabela">
+                <tr class="linha-header">
+                    <th>Concluido</th>
+                    <th>Tarefa</th>
+                    <th>Excluir</th>
+                </tr>
+                <tbody id="corpo-tabela">
+
+                </tbody>
+            </table>
+        </section>
+        <footer class="rodape">
+            <button onclick="removerTodas()" class="botao-remover">Remover todos</button>
+        </footer>
+    </main>
+</body>
+
+</html>
