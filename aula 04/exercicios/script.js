@@ -15,11 +15,11 @@ function mostrarTarefas(listaTarefas){
         let nome = document.createElement("td");
         nome.textContent = tarefa.nome;
 
-         
+
         let statusTarefa = document.createElement("td");
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.checked = tarefa.statusTarefa === "true"; 
+        checkbox.checked = tarefa.statusTarefa === "true";
 
         checkbox.addEventListener("change", function(){
             concluirTarefa(tarefa, checkbox, linha);
@@ -42,13 +42,18 @@ function mostrarTarefas(listaTarefas){
         linha.appendChild(statusTarefa);
         linha.appendChild(botaoExcluir);
 
+        if (tarefa.statusTarefa === "true") {
+            checkbox.disabled = true;
+            linha.style.backgroundColor = "lightgreen";
+        }
+
         tableBody.appendChild(linha)
     }
     atualizarContadores();
 }
 
 function adicionarTarefa() {
-            
+
     const tarefa = document.getElementById('tarefa').value;
     if (tarefa.trim() === '') {
         alert('Por favor, insira uma tarefa.');
@@ -57,7 +62,7 @@ function adicionarTarefa() {
 
     statusTarefaCriada = "false";
 
-            
+
     const tarefaNova = {
         id: contador,
         nome: tarefa,
@@ -99,7 +104,7 @@ function removerTarefasConcluidas(){
 function atualizarContadores() {
     const tarefasConcluidasCount = listaTarefas.filter(tarefa => tarefa.statusTarefa === "true").length;
     const tarefasPendentesCount = listaTarefas.filter(tarefa => tarefa.statusTarefa === "false").length;
-    
+
     document.getElementById('tarefas-concluidas-count').textContent = tarefasConcluidasCount;
     document.getElementById('tarefas-pendentes-count').textContent = tarefasPendentesCount;
 }
