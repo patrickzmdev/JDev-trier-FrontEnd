@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+section > h3 {
+    color: rgb(170, 170, 170);
+    text-align: center;
+}
+
+.input-tarefa {
+    margin: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(100, 97, 97);
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+    height: 100%;
+    width: 59%;
+    flex: 1 1 1;
+}
+
+.input-tarefa::placeholder {
+    color: rgb(170, 170, 170, 0.5);
+    font-size: 12px;
+}
+
+.input-tarefa:hover  {
+    border-color: rgb(129, 129, 129, 0.8);
+}
+
+.input-tarefa:focus {
+    font-size: 12px;
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid rgb(170, 170, 170);
+    color: rgb(170, 170, 170);
+    height: 100%;
+    width: 35%;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(129, 129, 129, 0.5);
+    box-shadow: 2px 2px 2px rgb(129, 129, 129, 1);
+}
+
+.title {
+    height: fit-content;
+    padding: 10px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(129, 129, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 70vw;
+    background-color: rgb(85, 84, 84);
+    border-radius: 10px;
+}
+
+.form {
+    height: fit-content;
+}
+
+.form form {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.todo-list ul {
+    height: fit-content;
+    list-style: none;
+}
+
+.todo-list ul li {
+    margin: 5px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(170, 170, 170);
+}
+
+.todo-list ul li label {
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+.check {
+    appearance: none;
+    border: 1px solid rgb(170, 170, 170);
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.check:checked {
+    background-color: #b9b9b9;
+}
+
+.fa {
+    font-size: 12px;
+    height: 100%;
+}
+
+.fa-trash {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.counters {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+
+.counters label, i {
+    color: rgb(170, 170, 170);
+    margin-left: 2px;
+}
+
+.counters div {
+    height: fit-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 476px) {
+    button, .input-tarefa {
+        width: 100%;
+    }
+    .main-menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .main-content {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1 class="div">Teste</h1>
+    <div style="height: 100px; width: 200px; border: 1px solid black;">
+        <label class="titulo-div">Label</label>
+    </div>
+    <br>
+    <div style="height: 100px; width: 200px; border: 1px solid black;">
+        <label class="titulo-div">Label</label>
+    </div>
+    <br>
+    <form onsubmit="buscaElementos(event)">
+        <div>
+            <input type="text" id="nome" onkeydown="adicionandoValor(event)">
+            <label id="descricaoNome">vazio</label>
+        </div>
+        <br>
+        <div>
+            <input type="number" id="idade">
+        </div>
+        <br>
+        <div>
+            <input type="text">
+        </div>
+        <br>
+        <button type="submit" >Enviar</button>
+    </form>
+</body>
+</html>
