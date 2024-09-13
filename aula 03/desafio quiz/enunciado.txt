@@ -1,0 +1,22 @@
+HTML:
+
+Crie um formulário com as perguntas e múltiplas opções (input type="radio") para cada pergunta.
+Um botão para enviar as respostas e outro para reiniciar o quiz.
+CSS:
+
+Estilize o quiz para deixá-lo visualmente atraente.
+Use cores diferentes para destacar perguntas corretas e erradas após o envio das respostas.
+JavaScript (DOM e eventos):
+
+Crie um array de perguntas, onde cada pergunta contém as opções e a resposta correta.
+As perguntas devem ser exibidas aleatoriamente a cada carregamento do quiz.
+Ao clicar no botão "Enviar", o JavaScript deve:
+Verificar quais respostas foram marcadas.
+Comparar com as respostas corretas e calcular o número de acertos.
+Exibir o resultado (ex.: "Você acertou X de Y perguntas").
+O botão "Reiniciar" deve limpar o quiz e permitir o usuário tentar novamente.
+
+Adicione um timer para o quiz, dando um tempo limite para o 
+usuário responder todas as perguntas.
+Exiba mensagens de feedback (por exemplo, "Excelente!" ou "Tente novamente!") 
+com base na pontuação do usuário.
