@@ -1,4 +1,17 @@
+*{
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
 h1{
   color: red;
   height: fit-content;
 }
+
+hr{
+  height: fit-content;
+  margin: 20px;
+}
+

@@ -1,8 +1,8 @@
-<div class="cabecalho">
-  <img src="../../assets/farmacia-logo.jpg">
-  <div class="search">
-    <input type="text" placeholder="buscar...">
-    <a href="www.google.com">Google</a>
-    <h1>{{titulo}}</h1>
-  </div>
-</div>
+<header>
+  <h1>{{ tituloRecebidoPai }}</h1>
+
+  <input type="text" [(ngModel)]="campoPesquisa" (blur)="pesquisar()" placeholder="Digite para pesquisar" />
+  <button (click)="pesquisar()">Pesquisar</button>
+
+  <button (click)="trocarTitulo()">Trocar título</button>
+</header>

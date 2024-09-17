@@ -1,0 +1,36 @@
+<table style="height: fit-content;" border="2">
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    <th>Ações</th>
+  </tr>
+  <tr *ngFor="let cliente of clientes; let i = index">
+    <td *ngIf="!cliente.editando">{{ cliente.nome }}</td>
+    <td *ngIf="cliente.editando">
+      <input [(ngModel)]="cliente.nome" />
+    </td>
+
+    <td *ngIf="!cliente.editando">{{ cliente.idade }}</td>
+    <td *ngIf="cliente.editando">
+      <input type="number" [(ngModel)]="cliente.idade" />
+    </td>
+
+    <td *ngIf="!cliente.editando">{{ cliente.email }}</td>
+    <td *ngIf="cliente.editando">
+      <input [(ngModel)]="cliente.email" />
+    </td>
+
+    <td *ngIf="!cliente.editando">{{ cliente.telefone }}</td>
+    <td *ngIf="cliente.editando">
+      <input [(ngModel)]="cliente.telefone" />
+    </td>
+
+    <td>
+      <button *ngIf="!cliente.editando" (click)="editarCliente(i)">Editar</button>
+      <button *ngIf="cliente.editando" (click)="salvarCliente(i)">Salvar</button>
+      <button (click)="excluirCliente(i)">Excluir</button>
+    </td>
+  </tr>
+</table>

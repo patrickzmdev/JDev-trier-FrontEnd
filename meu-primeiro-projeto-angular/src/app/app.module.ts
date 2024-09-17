@@ -7,13 +7,17 @@ import { MeuPrimeiroComponenteComponent } from './meu-primeiro-componente/meu-pr
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { FormsModule } from '@angular/forms';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListagemComponent } from './listagem/listagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponenteComponent,
     CabecalhoComponent,
-    ConteudoComponent
+    ConteudoComponent,
+    FormularioComponent,
+    ListagemComponent
   ],
   imports: [
     BrowserModule,

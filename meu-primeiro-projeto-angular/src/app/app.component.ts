@@ -3,8 +3,20 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'meu-primeiro-projeto-angular';
+  clientes: { nome: string; idade: number; email: string; telefone: string }[] = [];
+
+  adicionarCliente(cliente: { nome: string; idade: number; email: string; telefone: string }) {
+    this.clientes.push(cliente);
+  }
+
+  editarCliente(clienteEditado: { index: number; nome: string; idade: number; email: string; telefone: string }) {
+    this.clientes[clienteEditado.index] = clienteEditado;
+  }
+
+  excluirCliente(index: number) {
+    this.clientes.splice(index, 1);
+  }
 }

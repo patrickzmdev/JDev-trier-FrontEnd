@@ -1,0 +1,10 @@
+<div class="container-formulario">
+  <h1>Formulario</h1>
+  <form>
+    <input name="nome" type="text" placeholder="Nome" [(ngModel)]="nome" />
+    <input name="idade" type="number" placeholder="Idade" [(ngModel)]="idade" />
+    <input name="email" type="email" placeholder="Email" [(ngModel)]="email" />
+    <input name="telefone" type="text" placeholder="Telefone" [(ngModel)]="telefone" />
+    <button (click)="meuMetodo()">Enviar</button>
+  </form>
+</div>
