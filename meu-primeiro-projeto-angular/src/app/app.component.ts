@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  [x: string]: any;
   clientes: { nome: string; idade: number; email: string; telefone: string }[] = [];
 
   adicionarCliente(cliente: { nome: string; idade: number; email: string; telefone: string }) {
