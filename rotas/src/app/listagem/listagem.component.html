@@ -1,0 +1,19 @@
+<table style="height: fit-content;" border="2">
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    <th>Ações</th>
+  </tr>
+  <tr *ngFor="let cliente of clientes; let i = index">
+    <td>{{ cliente.nome }}</td>
+    <td>{{ cliente.idade }}</td>
+    <td>{{ cliente.email }}</td>
+    <td>{{ cliente.telefone }}</td>
+    <td>
+      <button (click)="editarCliente(i)">Editar</button>
+      <button (click)="excluirCliente(i)">Excluir</button>
+    </td>
+  </tr>
+</table>
