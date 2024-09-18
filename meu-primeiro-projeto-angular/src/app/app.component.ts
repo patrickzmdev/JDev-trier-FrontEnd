@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  [x: string]: any;
-  clientes: { nome: string; idade: number; email: string; telefone: string }[] = [];
+  clientes: { nome: string; idade: number; email: string; telefone: string; editando?: boolean }[] = [];
 
   adicionarCliente(cliente: { nome: string; idade: number; email: string; telefone: string }) {
     this.clientes.push(cliente);

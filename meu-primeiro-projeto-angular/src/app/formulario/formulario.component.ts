@@ -14,12 +14,14 @@ export class FormularioComponent {
   @Output() clienteAdicionado = new EventEmitter<{ nome: string; idade: number; email: string; telefone: string }>();
 
   meuMetodo() {
-    if (this.nome && this.idade !== undefined && this.email && this.telefone) {
+    if (this.idade > 0 && this.idade < 120) {
       this.clienteAdicionado.emit({ nome: this.nome, idade: this.idade, email: this.email, telefone: this.telefone });
       this.nome = '';
       this.idade = 0;
       this.email = '';
       this.telefone = '';
+    } else {
+      alert("Idade fora do permitido");
     }
   }
 }

@@ -1,16 +1,25 @@
 
-<app-conteudo></app-conteudo>
+<!--<app-conteudo></app-conteudo>
 <hr>
 <app-meu-primeiro-componente></app-meu-primeiro-componente>
-<hr>
+<hr>-->
 
-<app-formulario (clienteAdicionado)="adicionarCliente($event)"></app-formulario>
+<div class="menu-nav">
+  <nav>
+    <ul>
+      <li><a routerLink="/cadastro">Cadastro</a></li>
+      <li><a routerLink="/listagem">Listagem</a></li>
+    </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<!--<app-formulario (clienteAdicionado)="adicionarCliente($event)"></app-formulario>
 
 <app-listagem
   [clientes]="clientes"
   (clienteEditado)="editarCliente($event)"
   (clienteExcluido)="excluirCliente($event)">
-</app-listagem>
+</app-listagem>-->
 
 
 
