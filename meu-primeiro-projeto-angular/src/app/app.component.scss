@@ -15,3 +15,25 @@ hr{
   margin: 20px;
 }
 
+.menu-nav {
+  background-color: gray;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.menu-nav nav ul li a{
+  display: flex;
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.menu-nav nav ul li a:hover {
+  background-color: darkgray;
+  border-radius: 5px;
+}

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Client } from '../models/client';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -6,20 +8,33 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./formulario.component.scss']
 })
 export class FormularioComponent {
-  nome: string = '';
-  idade: number = 0;
-  email: string = '';
-  telefone: string = '';
+  cliente: Client = {
+    nome: '',
+    idade: 0,
+    email: '',
+    telefone: ''
+  };
 
-  @Output() clienteAdicionado = new EventEmitter<{ nome: string; idade: number; email: string; telefone: string }>();
+  @Output() clienteAdicionado = new EventEmitter<Client>();
+
+  constructor(private router: Router) {}
 
   meuMetodo() {
-    if (this.nome && this.idade !== undefined && this.email && this.telefone) {
-      this.clienteAdicionado.emit({ nome: this.nome, idade: this.idade, email: this.email, telefone: this.telefone });
-      this.nome = '';
-      this.idade = 0;
-      this.email = '';
-      this.telefone = '';
+    if (this.cliente.nome && this.cliente.idade > 0 && this.cliente.idade < 120 && this.cliente.email && this.cliente.telefone) {
+      this.clienteAdicionado.emit({ ...this.cliente });
+
+
+      this.cliente = {
+        nome: '',
+        idade: 0,
+        email: '',
+        telefone: ''
+      };
+
+
+      this.router.navigate(['/listagem']);
+    } else {
+      alert('Por favor, preencha todos os campos corretamente.');
     }
   }
 }

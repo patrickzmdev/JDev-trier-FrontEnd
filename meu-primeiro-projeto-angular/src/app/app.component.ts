@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Client } from './models/client';
+
 
 @Component({
   selector: 'app-root',
@@ -6,15 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  [x: string]: any;
-  clientes: { nome: string; idade: number; email: string; telefone: string }[] = [];
+  clientes: Client[] = [];
+  clienteEmEdicao: Client | null = null;
 
-  adicionarCliente(cliente: { nome: string; idade: number; email: string; telefone: string }) {
-    this.clientes.push(cliente);
+  adicionarCliente(novoCliente: Client) {
+    this.clientes.push(novoCliente);
   }
 
-  editarCliente(clienteEditado: { index: number; nome: string; idade: number; email: string; telefone: string }) {
-    this.clientes[clienteEditado.index] = clienteEditado;
+  selecionarCliente(cliente: Client) {
+    this.clienteEmEdicao = { ...cliente };
+  }
+
+  salvarCliente(cliente: Client) {
+    const index = this.clientes.findIndex(c => c.email === cliente.email);
+    if (index !== -1) {
+      this.clientes[index] = cliente;
+    }
+    this.clienteEmEdicao = null;
   }
 
   excluirCliente(index: number) {

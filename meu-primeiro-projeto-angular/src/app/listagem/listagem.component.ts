@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Client } from '../models/client';
 
 @Component({
   selector: 'app-listagem',
@@ -6,28 +7,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./listagem.component.scss']
 })
 export class ListagemComponent {
-  @Input() clientes: { nome: string; idade: number; email: string; telefone: string; editando?: boolean }[] = [];
-  @Output() clienteEditado = new EventEmitter<{ index: number; nome: string; idade: number; email: string; telefone: string }>();
+  @Input() clientes: Client[] = [];
+  @Output() clienteEditado = new EventEmitter<Client>();
   @Output() clienteExcluido = new EventEmitter<number>();
+  @Output() clienteSelecionado = new EventEmitter<Client>();
 
   editarCliente(index: number) {
-    this.clientes[index].editando = true;
-  }
-
-  salvarCliente(index: number) {
-    const cliente = this.clientes[index];
-    if (cliente.nome && cliente.email && cliente.telefone && cliente.idade) {
-      this.clientes[index].editando = false;
-      this.clienteEditado.emit({
-        index,
-        nome: cliente.nome,
-        idade: cliente.idade,
-        email: cliente.email,
-        telefone: cliente.telefone
-      });
-    } else {
-      alert('Todos os campos devem ser preenchidos!');
-    }
+    this.clienteSelecionado.emit(this.clientes[index]);
   }
 
   excluirCliente(index: number) {
