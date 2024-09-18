@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Client } from '../models/client';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -17,7 +17,13 @@ export class FormularioComponent {
 
   @Output() clienteAdicionado = new EventEmitter<Client>();
 
-  constructor(private router: Router) {}
+  constructor(private router: ActivatedRoute) {
+    this.router.params.subscribe((valores) => {
+      console.log(valores);
+      const idCliente = valores['id'];
+      console.log(idCliente);
+    })
+  }
 
   meuMetodo() {
     if (this.cliente.nome && this.cliente.idade > 0 && this.cliente.idade < 120 && this.cliente.email && this.cliente.telefone) {
@@ -31,8 +37,6 @@ export class FormularioComponent {
         telefone: ''
       };
 
-
-      this.router.navigate(['/listagem']);
     } else {
       alert('Por favor, preencha todos os campos corretamente.');
     }

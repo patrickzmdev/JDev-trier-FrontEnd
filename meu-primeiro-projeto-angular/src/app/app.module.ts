@@ -11,8 +11,17 @@ import { EdicaoComponent } from './edicao/edicao.component';
 
 const routes: Routes = [
   { path: 'cadastro', component: FormularioComponent },
+  {path: 'teste', redirectTo: 'cadastro'},
   { path: 'listagem', component: ListagemComponent },
-  { path: '', redirectTo: '/cadastro', pathMatch: 'full' }
+  { path: '', redirectTo: '/cadastro', pathMatch: 'full' },
+  {path: 'cadastro/:id', component: FormularioComponent},
+
+  {path: "clientes",
+    children: [
+      {path: 'listagem', component: ListagemComponent},
+      {path: 'cadastro', component: FormularioComponent}
+    ]
+  }
 ];
 
 @NgModule({
