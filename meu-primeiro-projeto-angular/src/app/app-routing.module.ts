@@ -8,7 +8,15 @@ const routes: Routes = [
   { path: '', redirectTo: '/listagem', pathMatch: 'full' },
   { path: 'listagem', component: ListagemComponent },
   { path: 'adicionar', component: FormularioComponent },
-  { path: 'editar/:id', component: EdicaoComponent }
+  { path: 'editar/:id', component: EdicaoComponent },
+  {
+    path:'listagem',
+      component:ListagemComponent,
+      children: [
+        {path: 'listagem', component: ListagemComponent},
+        {path: 'adicionar', component: FormularioComponent},
+      ]
+  }
 ];
 
 @NgModule({
