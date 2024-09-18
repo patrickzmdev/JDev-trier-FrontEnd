@@ -23,7 +23,7 @@ export class FormularioComponent {
     if (this.cliente.nome && this.cliente.idade > 0 && this.cliente.idade < 120 && this.cliente.email && this.cliente.telefone) {
       this.clienteAdicionado.emit({ ...this.cliente });
 
-
+      // Limpar o formulário
       this.cliente = {
         nome: '',
         idade: 0,

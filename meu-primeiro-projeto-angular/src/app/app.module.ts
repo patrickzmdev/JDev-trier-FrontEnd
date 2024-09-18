@@ -8,6 +8,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ListagemComponent } from './listagem/listagem.component';
 import { EdicaoComponent } from './edicao/edicao.component';
 
+
 const routes: Routes = [
   { path: 'cadastro', component: FormularioComponent },
   { path: 'listagem', component: ListagemComponent },

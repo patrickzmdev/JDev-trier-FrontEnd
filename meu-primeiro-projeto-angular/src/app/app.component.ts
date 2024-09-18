@@ -11,6 +11,8 @@ export class AppComponent {
   clientes: Client[] = [];
   clienteEmEdicao: Client | null = null;
 
+  cliente: { nome: string; idade: number; email: string; telefone: string; editando?: boolean }[] = [];
+
   adicionarCliente(novoCliente: Client) {
     this.clientes.push(novoCliente);
   }
