@@ -4,29 +4,24 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CabecalhoComponent } from './cabecalho/cabecalho.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { ListagemComponent } from './listagem/listagem.component';
-import { EdicaoComponent } from './edicao/edicao.component';
+
 import { Routes } from '@angular/router';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PaginaNaoExistenteComponent } from './components/pagina-nao-existente/pagina-nao-existente.component';
+import { ListagemComponent } from './components/listagem/listagem.component';
 
 
-const routes: Routes = [
-  {path : "",
-    children: [
-      {path: 'listagem', component: ListagemComponent},
-      {path: 'formulario', component: FormularioComponent}
-    ]
-  }
-]
 
 @NgModule({
   declarations: [
     AppComponent,
-    CabecalhoComponent,
-    FormularioComponent,
     ListagemComponent,
-    EdicaoComponent
+    CadastroComponent,
+    DashboardComponent,
+    HeaderComponent,
+    PaginaNaoExistenteComponent
   ],
   imports: [
     BrowserModule,

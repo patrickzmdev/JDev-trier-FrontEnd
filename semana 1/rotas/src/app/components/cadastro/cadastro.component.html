@@ -1,0 +1,9 @@
+<div class="cadastro-container">
+  <form class="formulario-cadastro" (submit)="cadastro($event)">
+    <h2>Cadastro de Funcionario</h2>
+    <input type="text" name="nome" placeholder="insira seu nome..." [(ngModel)]="nome">
+    <input type="number" name="idade" placeholder="insira sua idade..." [(ngModel)]="idade">
+    <input type="email" name="email" placeholder="insira seu email..." [(ngModel)]="email">
+    <input type="submit" value="Cadastrar">
+  </form>
+</div>
