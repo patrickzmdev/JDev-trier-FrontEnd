@@ -1,0 +1,30 @@
+<div class="layout">
+  <header class="header">
+    <h1>Gerenciamento Produto Usuário</h1>
+  </header>
+
+  <div class="main-container">
+    <nav class="sidebar">
+      <ul>
+        <li (click)="toggleProdutoMenu()" class="menu-item">
+          Produtos
+          <ul *ngIf="produtoMenuVisible" class="submenu">
+            <li><a routerLink="/produto/cadastro">Cadastrar Produto</a></li>
+            <li><a routerLink="/produto">Listar Produtos</a></li>
+          </ul>
+        </li>
+        <li (click)="toggleUsuarioMenu()" class="menu-item">
+          Usuários
+          <ul *ngIf="usuarioMenuVisible" class="submenu">
+            <li><a routerLink="/usuario/cadastro">Cadastrar Usuário</a></li>
+            <li><a routerLink="/usuario">Listar Usuários</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

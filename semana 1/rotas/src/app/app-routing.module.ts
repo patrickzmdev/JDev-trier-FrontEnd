@@ -13,6 +13,7 @@ const routes: Routes = [
     children: [
       {path: "cadastro", component: CadastroComponent},
       {path: "listagem", component: ListagemComponent},
+      {path: "cadastro/:id", component: CadastroComponent},
     ]
   },
   {path: "**", component: PaginaNaoExistenteComponent}

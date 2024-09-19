@@ -1,0 +1,15 @@
+criar projeto
+ng new nome-projeto --routing --standalone=false
+
+startar 
+ng s --o
+
+criar módulos com rota
+ng g m caminho --routing
+
+criar módulos
+ng g m caminho pasta
+
+criar componente
+ng g c caminho pasta
+
