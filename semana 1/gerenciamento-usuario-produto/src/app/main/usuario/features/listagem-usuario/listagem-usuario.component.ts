@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listagem-usuario',
@@ -10,19 +11,21 @@ export class ListagemUsuarioComponent implements OnInit {
   usuarios: any[] = [];
   router: any;
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService,
+    private route:Router
+  ) {}
 
   ngOnInit(): void {
     this.usuarios = this.usuarioService.listarUsuarios();
   }
 
-  editarUsuario(index: number): void {
+  editarUsuario(index: number){
     const usuarioParaEditar = this.usuarios[index];
-    this.router.navigate(['cadastro/:id', usuarioParaEditar.id]);
+    this.router.navigate([`usuario/cadastro`, usuarioParaEditar.id]);
   }
 
 
-  excluirUsuario(index: number): void {
+  excluirUsuario(index: number) {
     this.usuarioService.excluirUsuario(index);
     this.usuarios = this.usuarioService.listarUsuarios();
   }
