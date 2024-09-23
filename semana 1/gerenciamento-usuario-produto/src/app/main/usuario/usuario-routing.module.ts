@@ -8,8 +8,9 @@ const routes: Routes = [
   { path: '',
     component: UsuarioComponent,
     children: [
-      {path: '', component: ListagemUsuarioComponent},
-      {path: 'cadastro', component: CadastroUsuarioComponent}
+      { path: '', component: ListagemUsuarioComponent },
+      { path: 'cadastro', component: CadastroUsuarioComponent },
+      { path: 'cadastro/:id', component: CadastroUsuarioComponent }
     ]
   }
 ];

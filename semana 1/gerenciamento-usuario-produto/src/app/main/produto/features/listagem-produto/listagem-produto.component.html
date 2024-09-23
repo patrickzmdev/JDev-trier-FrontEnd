@@ -1,32 +1,8 @@
-<div class="listagem-container">
-  <table class="tabela">
-    <tr class="cabecalho">
-      <th>Id</th>
-      <th>Nome</th>
-      <th>Vencimento</th>
-      <th>Estoque</th>
-      <th>Editar</th>
-      <th>Excluir</th>
-    </tr>
-    <tbody class="tabela-corpo">
-      <tr class="linha-tabela">
-        <td>1</td>
-        <td>Sofa</td>
-        <td>N</td>
-        <td>20</td>
-        <td><button>Editar</button></td>
-        <td><button>Excluir</button></td>
-      </tr>
+<h2>Lista de Produtos</h2>
+<ul>
+  <li *ngFor="let produto of produtos">
+    {{ produto.name }} - {{ produto.estoque }}
+  </li>
+</ul>
 
-      <tr class="linha-tabela">
-        <td>2</td>
-        <td>Refrigerante</td>
-        <td>20/10/2024</td>
-        <td>500</td>
-        <td><button>Editar</button></td>
-        <td><button>Excluir</button></td>
-      </tr>
 
-    </tbody>
-  </table>
-</div>

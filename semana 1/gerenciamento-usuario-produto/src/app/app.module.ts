@@ -7,6 +7,7 @@ import { UsuarioModule } from './main/usuario/usuario.module';
 import { ProdutoModule } from './main/produto/produto.module';
 import { PaginaNaoExistenteComponent } from './main/pagina-nao-existente/pagina-nao-existente.component';
 import { LayoutModule } from "./main/layout/layout.module";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LayoutModule } from "./main/layout/layout.module";
     AppRoutingModule,
     UsuarioModule,
     ProdutoModule,
-    LayoutModule
+    LayoutModule,
+    RouterModule
 ],
   providers: [],
   bootstrap: [AppComponent]

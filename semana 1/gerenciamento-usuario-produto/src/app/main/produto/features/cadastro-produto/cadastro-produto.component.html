@@ -1,4 +1,19 @@
-<input type="text" placeholder="nome produto...">
-<input type="date" placeholder="data validade...">
-<input type="number" placeholder="quantidade estoque...">
-<button type="submit">Salvar</button>
+<form [formGroup]="form" (ngSubmit)="cadastrar()">
+  <div>
+    <label for="name">Nome do Produto</label>
+    <input id="name" formControlName="name" type="text" placeholder="Nome do produto..." />
+    <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+      O nome é obrigatório
+    </div>
+  </div>
+
+  <div>
+    <label for="estoque">Quantidade em Estoque</label>
+    <input id="estoque" formControlName="estoque" type="number" placeholder="Quantidade em estoque..." />
+    <div *ngIf="form.get('estoque')?.errors?.['estoqueMinimo'] && form.get('estoque')?.touched">
+      O estoque deve ser maior que zero.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Salvar</button>
+</form>

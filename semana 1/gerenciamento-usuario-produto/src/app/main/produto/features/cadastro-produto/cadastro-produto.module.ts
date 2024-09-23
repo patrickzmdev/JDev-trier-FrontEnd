@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastroProdutoComponent } from './cadastro-produto.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,8 @@ import { CadastroProdutoComponent } from './cadastro-produto.component';
     CadastroProdutoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class CadastroProdutoModule { }

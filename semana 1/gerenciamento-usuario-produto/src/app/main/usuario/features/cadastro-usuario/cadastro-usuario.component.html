@@ -1,3 +1,16 @@
-<input type="text" placeholder="nome usuario...">
-<input type="date" placeholder="data de nascimento...">
-<button type="submit">Salvar</button>
+<form [formGroup]="form" (ngSubmit)="cadastrar()">
+  <div>
+    <label for="name">Nome do Usuario</label>
+    <input id="name" formControlName="name" type="text" placeholder="Nome do usuario..." />
+    <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+      O nome é obrigatório
+    </div>
+  </div>
+
+  <div>
+    <label for="data">Data de nascimento</label>
+    <input id="data" formControlName="data" type="date" placeholder="data de nascimento.." />
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Salvar</button>
+</form>
