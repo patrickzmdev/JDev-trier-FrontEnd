@@ -1,0 +1,41 @@
+.form-section {
+  display: flex;
+  flex-direction: column; /* Exibe os grupos de input em linha */
+  justify-content: space-between; /* Distribui o espaço entre os grupos */
+  margin-bottom: 15px; /* Espaçamento inferior entre seções */
+}
+
+.input-group {
+  flex: 1; /* Faz os grupos ocuparem o mesmo espaço */
+  margin-right: 10px; /* Espaçamento entre os grupos */
+}
+
+.input-group:last-child {
+  margin-right: 0; /* Remove margem do último grupo */
+}
+
+.errorContainer {
+  color: red; /* Cor dos erros */
+  font-size: 0.9em; /* Tamanho da fonte dos erros */
+  margin-bottom: 5px; /* Espaçamento abaixo da mensagem de erro */
+}
+
+.submit-container {
+  display: flex; /* Exibe o botão de submit em linha */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 20px; /* Espaço acima do botão */
+}
+
+input[type="submit"] {
+  background-color: #48735F; /* Cor do botão */
+  color: white; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Cantos arredondados do botão */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+input[type="submit"]:hover {
+  background-color: #365e4e; /* Cor do botão ao passar o mouse */
+}

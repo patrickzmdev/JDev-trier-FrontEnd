@@ -1,0 +1,35 @@
+<form action="" [formGroup]="form">
+
+  <div class="form-section">
+    <div class="input-group">
+      <label for="produto">Produto</label>
+      <input type="text" name="produto" formControlName="produto" placeholder="nome...">
+    </div>
+
+    <div class="input-group">
+      <label for="marca">Marca</label>
+      <input type="text" name="marca" formControlName="marca" placeholder="marca...">
+    </div>
+  </div>
+
+  <div class="form-section">
+      <div class="input-group">
+        <label for="estoque">Estoque</label>
+        <input type="number" name="estoque" formControlName="estoque" placeholder="estoque...">
+      </div>
+
+      <div class="input-group">
+        <label for="preco">Preço</label>
+        <input type="number" name="preco" formControlName="preco" placeholder="preço...">
+      </div>
+  </div>
+
+    <div class="error-container">
+      <p *ngIf="form.get('estoque')?.hasError('estoqueInvalido')">Erro:Estoque Invalido</p>
+      <p *ngIf="form.get('preco')?.hasError('precoInvalido')">Erro: Preço Invalido</p>
+    </div>
+
+  <div class="submit-container">
+    <input type="submit" value="Cadastrar" [disabled]="!form.valid" [ngClass]="{botao:form.valid}">
+  </div>
+</form>

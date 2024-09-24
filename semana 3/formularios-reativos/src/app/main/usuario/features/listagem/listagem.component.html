@@ -1,0 +1,20 @@
+<table>
+  <tr class="header">
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Data de Nascimento</th>
+    <th>Editar</th>
+    <th>Excluir</th>
+  </tr>
+  <tbody>
+    <tr class="linha" *ngFor="let user of userList">
+      <td>{{user.id}}</td>
+      <td>{{user.nome}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.dataNascimento | date}}</td>
+      <td><button (click)="editUser(user.id!)">Editar</button></td>
+      <td><button (click)="removeUser(user.id!)">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>
