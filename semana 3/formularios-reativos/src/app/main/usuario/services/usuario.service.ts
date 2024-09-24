@@ -20,12 +20,14 @@ export class UsuarioService {
   }
 
   addUsuario(usuario: User){
-    if(usuario.id == undefined){
+    if(!usuario.id){
       usuario.id = ++this.id;
       this.usuarios.push(usuario)
+      alert("Cadastro efetuado com sucesso")
     }else{
       this.usuarios = this.usuarios.filter((user) => user.id != usuario.id)
       this.usuarios.push(usuario)
+      alert("Cadastro editado com sucesso")
     }
   }
 

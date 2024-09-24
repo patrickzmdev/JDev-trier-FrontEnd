@@ -1,9 +1,11 @@
 header{
   width: 100%;
   height: 10vh;
-  background-color: #48735F;
+  background-color: #83cfac;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black;
 }
@@ -15,13 +17,23 @@ header button{
   box-shadow: 20px;
   border-radius: 20px;
   cursor: pointer;
-  position: absolute;
   margin-right: 0;
 }
 
-header h1{
-  position: absolute;
-  margin-left: 45%;
+header img{
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.class-carrinho{
+  width: 40px;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #83bba1;
 }
 
 .main-container{
@@ -31,7 +43,7 @@ header h1{
 }
 
 .sidebar {
-  background-color: #48735F;
+  background-color: #83bba1;
   width: 8rem;
   padding: 1rem;
   border-radius: 2px;

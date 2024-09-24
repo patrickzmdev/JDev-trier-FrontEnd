@@ -34,7 +34,7 @@ export class CadastroComponent implements OnInit {
       id: [undefined],
       nome: ["", Validators.required],
       email: ["", [Validators.required, this.validacaoEmail.bind(this)]],
-      dataNascimento:["", Validators.required]
+      dataNascimento:["", [this.validacaoNascimento]]
     })
   }
 
@@ -46,7 +46,9 @@ export class CadastroComponent implements OnInit {
   }
 
   validacaoNascimento(dataNascimento: FormGroup) {
-    if (dataNascimento.value == null) {
+    const data = new Date(dataNascimento.value);
+    const hoje = new Date();
+    if ((dataNascimento.value == null) || (data > hoje)) {
       return { dataNascimentoInvalida: true }
     }
     return null

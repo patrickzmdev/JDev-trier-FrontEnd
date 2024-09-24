@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CadastroComponent implements OnInit {
   form!: FormGroup
   product?: Product
+  Number: any;
+  quantidadeCarrinho = 0;
 
   constructor(
     private formBuilder:FormBuilder,
