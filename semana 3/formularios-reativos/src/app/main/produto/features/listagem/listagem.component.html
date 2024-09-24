@@ -1,1 +1,22 @@
-<p>listagem works!</p>
+<table>
+  <tr class="header">
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Marca</th>
+    <th>Estoque</th>
+    <th>Preco</th>
+    <th>Editar</th>
+    <th>Excluir</th>
+  </tr>
+  <tbody>
+    <tr class="linha" *ngFor="let product of productList">
+      <td>{{product.id}}</td>
+      <td>{{product.nome}}</td>
+      <td>{{product.marca}}</td>
+      <td>{{product.estoque}}</td>
+      <td>{{product.preco}}</td>
+      <td><button (click)="editProduct(product.id!)">Editar</button></td>
+      <td><button (click)="removeProduct(product.id!)">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>

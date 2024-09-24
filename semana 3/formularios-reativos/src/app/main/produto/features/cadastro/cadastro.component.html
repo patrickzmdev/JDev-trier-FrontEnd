@@ -1,9 +1,9 @@
-<form action="" [formGroup]="form">
+<form action="" [formGroup]="form" (submit)="cadastrar()">
 
   <div class="form-section">
     <div class="input-group">
       <label for="produto">Produto</label>
-      <input type="text" name="produto" formControlName="produto" placeholder="nome...">
+      <input type="text" name="nome" formControlName="nome" placeholder="nome...">
     </div>
 
     <div class="input-group">
@@ -14,20 +14,24 @@
 
   <div class="form-section">
       <div class="input-group">
+        <div class="errorContainer">
+          <p *ngIf="form.get('estoque')?.hasError('estoqueInvalido')">Erro: Estoque inválido</p>
+        </div>
         <label for="estoque">Estoque</label>
         <input type="number" name="estoque" formControlName="estoque" placeholder="estoque...">
       </div>
 
       <div class="input-group">
+        <div class="errorContainer">
+          <p *ngIf="form.get('preco')?.hasError('precoInvalido')">Erro: Preço Invalido</p>
+        </div>
         <label for="preco">Preço</label>
         <input type="number" name="preco" formControlName="preco" placeholder="preço...">
       </div>
   </div>
 
-    <div class="error-container">
-      <p *ngIf="form.get('estoque')?.hasError('estoqueInvalido')">Erro:Estoque Invalido</p>
-      <p *ngIf="form.get('preco')?.hasError('precoInvalido')">Erro: Preço Invalido</p>
-    </div>
+
+
 
   <div class="submit-container">
     <input type="submit" value="Cadastrar" [disabled]="!form.valid" [ngClass]="{botao:form.valid}">

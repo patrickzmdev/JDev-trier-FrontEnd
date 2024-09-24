@@ -1,0 +1,48 @@
+table {
+  width: 80vh;
+  border-collapse: collapse;
+}
+
+.header {
+  background-color: #48735F;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
+
+.header th {
+  padding: 12px;
+}
+
+.linha {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.linha:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+.linha:hover {
+  background-color: #d1e4d3;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  background-color: #48735F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #365e4e;
+  transform: scale(1.05);
+}

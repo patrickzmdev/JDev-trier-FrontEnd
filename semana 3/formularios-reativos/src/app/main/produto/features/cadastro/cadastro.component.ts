@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Product } from '../../model/product';
+import { ProdutoService } from '../../services/produto.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,17 +11,28 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CadastroComponent implements OnInit {
   form!: FormGroup
+  product?: Product
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(
+    private formBuilder:FormBuilder,
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute
+  ){
+    this.route.params.subscribe((param) => {
+      this.product = produtoService.getById(param['id']);
+    })
+  }
 
 
   ngOnInit(): void {
     this.buildForm();
+    this.form.patchValue(this.product!)
   }
 
   buildForm(){
     this.form = this.formBuilder.group({
-      produto: [null, Validators.required],
+      id: [undefined],
+      nome: [null, Validators.required],
       marca: [null, Validators.required],
       estoque: [0, (Validators.required, this.validacaoEstoque.bind(this))],
       preco: [0, (Validators.required, this.validacaoPreco.bind(this))]
@@ -37,6 +51,10 @@ export class CadastroComponent implements OnInit {
       return {precoInvalido: true}
     }
     return null
+  }
+
+  cadastrar(){
+    this.produtoService.addProduto(this.form.getRawValue())
   }
 
 }
