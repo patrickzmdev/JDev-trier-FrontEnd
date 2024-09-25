@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Album } from '../models/album';
 import { Foto } from '../models/foto';
 import { FotoServiceService } from '../services/foto-service.service';
@@ -10,10 +10,16 @@ import { Router } from '@angular/router';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit{
+  @ViewChild('albumContainer') albumContainer!: ElementRef;
 
   albuns!: Array<Album>
   fotos!: Array<Foto>
   fotoSelecionada?: Foto;
+  tituloPagina = 'Album de Fotos';
+
+  ngAfterViewInit(): void{
+    this.albumContainer.nativeElement.style.border = "30px solid #ccc";
+  }
 
 
 
@@ -45,17 +51,6 @@ export class LayoutComponent implements OnInit{
           return album;
 
         });
-
-
-
-
-
-        //this.albuns = albuns.map((album) => {
-        //  const fotosDoAlbum = album.fotos = this.fotos.filter(foto => foto.albumId === album.id).slice(0, 10);
-        //  album.mostrarFotos = false;
-        //  console.log(`Álbum: ${album.title}`, fotosDoAlbum);
-
-        //  return album;
 
 
       });

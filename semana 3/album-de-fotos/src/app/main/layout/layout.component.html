@@ -1,7 +1,8 @@
 <header>
-  <h1>Álbum de Fotos</h1>
+  <h1>{{tituloPagina | uppercase}}</h1>
 </header>
 <main>
+  <div #albumContainer>
   <div class="container-principal">
     <div class="container-album" *ngFor="let album of albuns">
 
@@ -11,10 +12,11 @@
       </div>
       <div class="container-titulo">
 
-      </div>
+
       <h1 (click)="toggleFotos(album)">
         {{album.title}}
       </h1>
+    </div>
 
 
       <div class="fotos-container" *ngIf="album.mostrarFotos">
@@ -23,7 +25,11 @@
         </div>
       </div>
     </div>
+    <div appMinhaDiretiva>
+      <label>Teste diretiva</label>
+    </div>
   </div>
+</div>
 
   <div *ngIf="fotoSelecionada" class="foto-principal">
     <h2>{{fotoSelecionada.title}}</h2>

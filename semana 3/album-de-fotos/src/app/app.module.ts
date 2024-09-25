@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './main/layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FotoServiceService } from './main/services/foto-service.service';
+import { MinhaDiretivaDirective } from './main/directive/minha-diretiva.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MinhaDiretivaDirective
   ],
   imports: [
     BrowserModule,
