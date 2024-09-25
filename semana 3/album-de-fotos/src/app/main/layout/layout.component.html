@@ -1,0 +1,26 @@
+<header>
+  <h1>Álbum de Fotos</h1>
+</header>
+<main>
+  <div class="container-principal">
+    <div class="container-album" *ngFor="let album of albuns">
+
+      <h1 (click)="toggleFotos(album)">
+        {{album.title}}
+      </h1>
+
+
+      <div class="fotos-container" *ngIf="album.mostrarFotos">
+        <div class="fotos" *ngFor="let foto of album.fotos" (click)="selecionarFoto(foto)">
+          <img [src]="foto.thumbnailUrl" alt="{{foto.title}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="fotoSelecionada" class="foto-principal">
+    <h2>{{fotoSelecionada.title}}</h2>
+    <img [src]="fotoSelecionada.url" alt="{{fotoSelecionada.title}}"/>
+    <button (click)="fotoSelecionada = undefined">Fechar</button>
+  </div>
+</main>
