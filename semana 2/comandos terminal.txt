@@ -11,5 +11,5 @@ criar módulos
 ng g m caminho pasta 
 
 criar componente
-ng g c caminho pasta 
+ng g c caminho pasta .
 
