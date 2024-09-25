@@ -5,6 +5,13 @@
   <div class="container-principal">
     <div class="container-album" *ngFor="let album of albuns">
 
+
+      <div class="foto-thumbnail" *ngIf="album.fotos && album.fotos.length > 0">
+        <img [src]="album.fotos[0].thumbnailUrl" alt="{{album.title}} thumbnail">
+      </div>
+      <div class="container-titulo">
+
+      </div>
       <h1 (click)="toggleFotos(album)">
         {{album.title}}
       </h1>
