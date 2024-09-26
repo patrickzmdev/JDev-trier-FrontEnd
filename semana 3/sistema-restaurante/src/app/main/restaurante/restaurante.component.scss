@@ -1,0 +1,94 @@
+.container-restaurante {
+  height: 90vh;
+  background-color: burlywood;
+}
+
+.container-restaurante h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-restaurante nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.menu-items {
+  list-style-type: none;
+  width: 100vh;
+  padding: 10px;
+  background-color: darksalmon;
+  border-radius: 5px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-items li {
+  position: relative;
+}
+
+.menu-items a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.menu-items a:hover {
+  background-color: lightcoral;
+}
+
+.submenu-items {
+  display: none;
+  position: absolute;
+  width: 15rem;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  padding: 0;
+  background-color: darksalmon;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-items li:hover .submenu-items {
+  display: block;
+  transition: 1s;
+}
+
+.submenu-items li a {
+  padding: 10px;
+  color: black;
+  transition: background-color 1s ease;
+}
+
+.submenu-items li a:hover {
+  background-color: lightcoral;
+}
+
+.container-center {
+  overflow: hidden;
+  position: relative;
+  height: calc(85vh - 80px);
+  background-color: burlywood;
+  z-index: 0;
+}
+
+.container-center img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  padding: 10px;
+  border-radius: 5px;
+}

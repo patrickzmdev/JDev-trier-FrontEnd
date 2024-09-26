@@ -1,0 +1,35 @@
+.container-home{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(238, 211, 176);
+}
+
+.container-home-principal{
+  display: flex;
+  align-items: center;
+  border: 3px solid burlywood;
+  margin: 30px;
+  justify-content: space-around;
+  background-color: floralwhite;
+}
+
+.container-home-principal img{
+  width: 40rem;
+  height: 30rem;
+  border: 3px solid burlywood;
+  border-radius: 5px;
+}
+
+.container-beneficios{
+  background-color: burlywood;
+  width: 30%;
+  height: 50%;
+  border-radius: 5px;
+}
+
+.container-beneficios p{
+  margin:10px;
+}

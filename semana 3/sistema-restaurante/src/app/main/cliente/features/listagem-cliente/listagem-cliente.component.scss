@@ -1,0 +1,32 @@
+.container-listagem{
+  height: 80vh;
+  background-color: floralwhite;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+td button{
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: burlywood;
+  transition: 1s;
+}
+
+td button:hover{
+  background-color: darksalmon;
+}
+
+th {
+  background-color: bisque;
+}

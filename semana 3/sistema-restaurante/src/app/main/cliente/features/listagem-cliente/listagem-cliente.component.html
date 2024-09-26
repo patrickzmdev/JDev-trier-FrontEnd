@@ -1,0 +1,39 @@
+<div class="container-listagem">
+<h2>Clientes</h2>
+<input type="text" placeholder="Buscar por nome" [(ngModel)]="searchTerm" (input)="listarClientes()" />
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>CPF</th>
+      <th>Data de Nascimento</th>
+      <th>Sexo</th>
+      <th>Telefone</th>
+      <th>Data de Cadastro</th>
+      <th>Quantidade de Reservas</th>
+      <th>Valor Gasto</th>
+      <th>Bloqueado</th>
+      <th>Atualizar Registro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nome }}</td>
+      <td>{{ cliente.sobrenome }}</td>
+      <td>{{ cliente.cpf }}</td>
+      <td>{{ cliente.dataNascimento | date }}</td>
+      <td>{{ cliente.sexo }}</td>
+      <td>{{ cliente.telefone }}</td>
+      <td>{{ cliente.dataCadastro | date }}</td>
+      <td>{{ cliente.quantidadeReservas }}</td>
+      <td>{{ cliente.quantidadeValorGasto | currency }}</td>
+      <td>{{ cliente.bloqueado ? 'Sim' : 'Não' }}</td>
+      <td><button (click)="atualizarCliente(cliente.id!)">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -7,30 +7,9 @@ import { ClienteServiceService } from './service/cliente-service.service';
   templateUrl: './cliente.component.html',
   styleUrls: ['./cliente.component.scss']
 })
-export class ClienteComponent implements OnInit {
+export class ClienteComponent {
 
-  clientes: ClienteDto[] = [];
-  searchTerm: string = '';
-  page: number = 0;
-  size: number = 10;
 
-  constructor(private clienteService: ClienteServiceService){}
 
-  ngOnInit(): void {
-    this.listarClientes();
-  }
-
-  listarClientes(): void {
-    this.clienteService.listarClientes(this.page, this.size, this.searchTerm)
-      .subscribe(response => {
-        this.clientes = response.content;
-      });
-  }
-
-  adicionarCliente(cliente: ClienteDto): void {
-    this.clienteService.adicionarCliente(cliente).subscribe(() => {
-      this.listarClientes();
-    })
-  }
 
 }
