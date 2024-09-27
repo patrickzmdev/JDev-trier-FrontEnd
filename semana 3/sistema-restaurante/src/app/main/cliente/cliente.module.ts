@@ -6,12 +6,16 @@ import { CadastroClienteComponent } from './features/cadastro-cliente/cadastro-c
 import { ListagemClienteComponent } from './features/listagem-cliente/listagem-cliente.component';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { CpfPipe } from './pipes/cpf.pipe';
+import { TelefonePipe } from './pipes/telefone.pipe';
 
 
 @NgModule({
   declarations: [
     CadastroClienteComponent,
-    ListagemClienteComponent
+    ListagemClienteComponent,
+    CpfPipe,
+    TelefonePipe
   ],
   imports: [
     CommonModule,

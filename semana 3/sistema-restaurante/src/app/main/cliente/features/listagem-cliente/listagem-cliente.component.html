@@ -24,10 +24,10 @@
       <td>{{ cliente.id }}</td>
       <td>{{ cliente.nome }}</td>
       <td>{{ cliente.sobrenome }}</td>
-      <td>{{ cliente.cpf }}</td>
+      <td>{{ cliente.cpf | cpf }}</td>
       <td>{{ cliente.dataNascimento | date }}</td>
       <td>{{ cliente.sexo }}</td>
-      <td>{{ cliente.telefone }}</td>
+      <td>{{ cliente.telefone | telefone}}</td>
       <td>{{ cliente.dataCadastro | date }}</td>
       <td>{{ cliente.quantidadeReservas }}</td>
       <td>{{ cliente.quantidadeValorGasto | currency }}</td>

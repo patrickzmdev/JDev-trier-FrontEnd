@@ -1,1 +1,26 @@
-<p>listagem-restaurante works!</p>
+<div class="container-listagem">
+  <h2>Restaurante</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Cnpj</th>
+        <th>Quantidade Estrelas</th>
+        <th>Atualizar Registro</th>
+        <th>Remover Registro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restaurante of restaurantes">
+        <td>{{ restaurante.id }}</td>
+        <td>{{ restaurante.nome }}</td>
+        <td>{{ restaurante.cnpj | cnpj }}</td>
+        <td>{{ restaurante.estrelas }}</td>
+        <td><button (click)="atualizarRestaurante(restaurante.id!)">Editar</button></td>
+        <td><button (click)="removerRestaurante(restaurante.id!)">Remover</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,76 @@
+.container-listagem{
+  height: 80vh;
+  background-color: floralwhite;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+td button{
+  width: 60%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: burlywood;
+  transition: 1s;
+}
+
+td button:hover{
+  background-color: darksalmon;
+}
+
+th {
+  background-color: bisque;
+}
+@media (max-width: 768px) {
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+
+  th, td {
+    padding: 6px;
+  }
+
+  td button {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container-listagem {
+    padding: 10px;
+  }
+
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+
+  th, td {
+    padding: 4px;
+    font-size: 0.85rem;
+  }
+
+  td button {
+    padding: 4px;
+    font-size: 0.8rem;
+  }
+}

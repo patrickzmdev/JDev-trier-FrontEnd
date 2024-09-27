@@ -1,5 +1,5 @@
 import { MesaDto } from '../model/mesa';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -27,6 +27,19 @@ export class MesaServiceService {
 
   getMesaById(id:number): Observable<MesaDto> {
     return this.http.get<MesaDto>(`${this.apiUrl}/${id}`)
+  }
+
+  buscarMesaPorDataECapacidadePessoas(
+    idRestaurante: number,
+    data: string,
+    capacidadePessoas: number
+  ): Observable<MesaDto[]> {
+    const params = new HttpParams()
+      .set('idRestaurante', idRestaurante.toString())
+      .set('data', data)
+      .set('capacidadePessoas', capacidadePessoas.toString());
+
+    return this.http.get<MesaDto[]>(`${this.apiUrl}/busca`, { params });
   }
 
 }

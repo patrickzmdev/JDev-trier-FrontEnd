@@ -33,4 +33,6 @@ export class ListagemClienteComponent implements OnInit {
   atualizarCliente(id: number){
     this.router.navigateByUrl(`cliente/cadastro/${id}`)
   }
+
+
 }

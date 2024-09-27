@@ -1,1 +1,23 @@
-<p>buscar-mesa works!</p>
+<div>
+  <h2>Buscar Mesas</h2>
+  <form (ngSubmit)="buscarMesas()">
+    <label for="idRestaurante">ID do Restaurante:</label>
+    <input type="number" [(ngModel)]="idRestaurante" name="idRestaurante" required>
+
+    <label for="data">Data:</label>
+    <input type="date" [(ngModel)]="data" name="data" required>
+
+    <label for="capacidadePessoas">Capacidade de Pessoas:</label>
+    <input type="number" [(ngModel)]="capacidadePessoas" name="capacidadePessoas" required>
+
+    <button type="submit">Buscar</button>
+  </form>
+
+  <h3>Mesas Encontradas:</h3>
+  <ul>
+    <li *ngFor="let mesa of mesas">
+      Mesa ID: {{ mesa.id }}, Capacidade: {{ mesa.qntPessoas }}
+    </li>
+    <li>Fim da Busca</li>
+  </ul>
+</div>

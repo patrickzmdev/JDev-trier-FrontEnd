@@ -7,16 +7,19 @@ import { MesaComponent } from './mesa.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CadastroMesaComponent } from './cadastro-mesa/cadastro-mesa.component';
 import { ListagemMesaComponent } from './listagem-mesa/listagem-mesa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BuscarMesaComponent } from './buscar-mesa/buscar-mesa.component';
 
 
 @NgModule({
-  declarations: [MesaComponent, CadastroMesaComponent, ListagemMesaComponent],
+  declarations: [MesaComponent, CadastroMesaComponent, ListagemMesaComponent, BuscarMesaComponent],
   imports: [
     CommonModule,
     MesaRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class MesaModule { }
