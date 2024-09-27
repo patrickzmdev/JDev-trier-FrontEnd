@@ -1,0 +1,15 @@
+<div class="form-group">
+  <h2>{{ isEditMode ? 'Editar Mesa' : 'Adicionar Mesa' }}</h2>
+  <form #mesaForm="ngForm" (ngSubmit)="adicionarMesa(mesaForm.value)">
+    <div>
+      <label for="numero">Numero:</label>
+      <input type="number" id="numero" name="numero" [(ngModel)]="mesa.numero" required />
+
+      <label for="qntPessoas">Capacidade:</label>
+      <input type="number" id="qntPessoas" name="qntPessoas" [(ngModel)]="mesa.qntPessoas" required />
+      <label for="idRestaurante">ID do Restaurante:</label>
+      <input type="number" id="idRestaurante" name="idRestaurante" [(ngModel)]="mesa.idRestaurante" required />
+    </div>
+    <button type="submit">{{ isEditMode ? 'Atualizar Mesa' : 'Adicionar Mesa' }}</button>
+  </form>
+</div>

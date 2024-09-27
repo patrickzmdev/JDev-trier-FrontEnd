@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { ClienteRoutingModule } from './cliente-routing.module';
 import { CadastroClienteComponent } from './features/cadastro-cliente/cadastro-cliente.component';
 import { ListagemClienteComponent } from './features/listagem-cliente/listagem-cliente.component';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { RouterOutlet } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FormBuilder, FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ClienteRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterOutlet
   ]
 })
 export class ClienteModule { }

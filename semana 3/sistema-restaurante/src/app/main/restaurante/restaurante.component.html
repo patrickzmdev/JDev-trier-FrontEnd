@@ -4,8 +4,8 @@
     <ul class="menu-items">
       <li>Gestão Restaurante
         <ul class="submenu-items">
-          <li><a routerLink="/cadastrar-restaurante" routerLinkActive="active">Cadastrar Restaurante</a></li>
-          <li><a routerLink="/listar-restaurantes" routerLinkActive="active">Listar Restaurantes</a></li>
+          <li><a routerLink="/cadastro" routerLinkActive="active">Cadastrar Restaurante</a></li>
+          <li><a routerLink="/listagem" routerLinkActive="active">Listar Restaurantes</a></li>
         </ul>
       </li>
       <li>Gestão Funcionários
@@ -14,28 +14,14 @@
           <li><a routerLink="/listar-funcionarios" routerLinkActive="active">Listar Funcionários</a></li>
         </ul>
       </li>
-      <li>Gestão Mesas
-        <ul class="submenu-items">
-          <li><a routerLink="/cadastrar-mesa" routerLinkActive="active">Cadastrar Mesa</a></li>
-          <li><a routerLink="/listar-mesas" routerLinkActive="active">Listar Mesas</a></li>
-          <li><a routerLink="/buscar-mesa" routerLinkActive="active">Buscar Mesa</a></li>
-        </ul>
-      </li>
-      <li>Gestão Pedidos
-        <ul class="submenu-items">
-          <li><a routerLink="/adicionar-pedido" routerLinkActive="active">Adicionar Pedido</a></li>
-        </ul>
-      </li>
-      <li>Gestão Reservas
-        <ul class="submenu-items">
-          <li><a routerLink="/adicionar-reserva" routerLinkActive="active">Adicionar Reserva</a></li>
-          <li><a routerLink="/buscar-reserva" routerLinkActive="active">Buscar Reserva</a></li>
-          <li><a routerLink="/alterar-status-reserva" routerLinkActive="active">Alterar Status Reserva</a></li>
-        </ul>
-      </li>
+      <li><a routerLink="mesa" routerLinkActive="active">Gestão Mesas</a></li>
+      <li><a routerLink="pedido" routerLinkActive="active">Gestão Pedidos</a></li>
+      <li><a routerLink="reserva" routerLinkActive="active">Gestão Reservas</a></li>
+
     </ul>
   </nav>
-  <div class="container-center">
-    <img src="../../../assets/imagem-fundo.jpg" alt="restaurante"/>
+  <div class="content-area">
+    <router-outlet></router-outlet>
   </div>
+
 </div>

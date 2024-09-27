@@ -1,12 +1,20 @@
 .container-restaurante {
-  height: 90vh;
-  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../../assets/imagem-fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .container-restaurante h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: burlywood;
+  border-radius: 5px;
 }
 
 .container-restaurante nav {
@@ -14,7 +22,6 @@
   justify-content: center;
   align-items: center;
   background-color: burlywood;
-  padding: 20px;
   position: relative;
   z-index: 10;
 }
@@ -25,7 +32,6 @@
   padding: 10px;
   background-color: darksalmon;
   border-radius: 5px;
-  margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,6 +87,8 @@
   height: calc(85vh - 80px);
   background-color: burlywood;
   z-index: 0;
+  background-size: cover;
+  background-position: center;
 }
 
 .container-center img {
@@ -91,4 +99,36 @@
   opacity: 0.7;
   padding: 10px;
   border-radius: 5px;
+}
+
+.content-area {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-items {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-items li {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .submenu-items {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 10px;
+    background-color: indianred;
+  }
+
+  .submenu-items li a {
+    padding: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.1s ease;
+  }
 }

@@ -12,6 +12,7 @@ import { HomeComponent } from './main/home/home.component';
 import { FooterComponent } from './main/footer/footer.component';
 import { RestauranteComponent } from './main/restaurante/restaurante.component';
 import { provideEnvironmentNgxMask } from 'ngx-mask';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -23,12 +24,14 @@ import { provideEnvironmentNgxMask } from 'ngx-mask';
     FooterComponent,
     RestauranteComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ClienteModule,
     HttpClientModule,
+    RouterModule
   ],
   providers: [provideEnvironmentNgxMask()],
   bootstrap: [AppComponent]

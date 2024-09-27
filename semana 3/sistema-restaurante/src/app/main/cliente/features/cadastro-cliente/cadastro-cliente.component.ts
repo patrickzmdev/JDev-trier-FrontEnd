@@ -53,12 +53,18 @@ export class CadastroClienteComponent implements OnInit {
   adicionarCliente(cliente: ClienteDto): void {
     if (this.isEditMode) {
       this.clienteService.atualizarCliente(this.cliente!.id, cliente).subscribe(() => {
+        alert('Cliente atualizado com sucesso')
         this.router.navigate(['/cliente']);
+      }, (error) => {
+        alert('Ocorreu um erro ao atualizar o cliente.');
       });
     } else {
 
       this.clienteService.adicionarCliente(cliente).subscribe(() => {
+        alert('Cliente adicionado com sucesso')
         this.router.navigate(['/cliente']);
+      }, (error) => {
+        alert('Ocorreu um erro ao adicionar o cliente.');
       });
     }
   }

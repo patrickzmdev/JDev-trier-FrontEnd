@@ -1,0 +1,24 @@
+<div class="container-listagem">
+  <h2>Mesas</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Numero</th>
+        <th>Capacidade</th>
+        <th>Id_Restaurante</th>
+        <th>Atualizar Registro</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mesa of mesas">
+        <td>{{ mesa.id }}</td>
+        <td>{{ mesa.numero }}</td>
+        <td>{{ mesa.qntPessoas }}</td>
+        <td>{{ mesa.idRestaurante }}</td>
+        <td><button (click)="atualizarMesa(mesa.id!)">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
